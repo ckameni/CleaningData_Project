@@ -32,7 +32,15 @@ Each of the subject were measured for the following six activities:
 ##transformations
 Following transformations were done to the data.
 
- The files X\_train.txt, Y\_train.txt and subject\_train.txt were merge to one using cbind to one data set containing all the three training data. TheX\_test.txt,Y\_test.txt and the subject_test.txt
+ The files X\_train.txt, Y\_train.txt and subject\_train.txt were merge  to one data set(trainData) containing all the three training data. 
+ The files X\_test.txt,  Y\_test.txt and the subject\_test.txt were merge to one data set( testData) containing all the three test data. 
+trainData and testData were merged to one,complete, data frame(mergedData) using rbind.
+
+ Name the columns of the mergedData with the aid of the features.txt file and extract  mean and standard deviation measurements using the grep() function. Create a data frame(filterDf) with the extracted data  using a loop then name the columns of the new data frame.
+ 
+ to get descriptive activities 
+
+
  
 column wise stack y_xxxx.txt, x_xxxx.txt and subject_xxx.txt using cbind for both training and test dataset ( xxxx = test / train). This gives consolidated data for both training and test dataset.
 row wise stack test and training data using rbind. This gives complete dataset.
