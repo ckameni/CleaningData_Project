@@ -37,25 +37,24 @@ The subjects are numbered from 1 to 30
 
 Each of the subject were measured for the following six activities: 
 .WALKING, 
-.WALKING\_UPSTAIRS, 
-.WALKING\_DOWNSTAIRS, 
-.SITTING, 
-.STANDING, 
-.LAYING
+*WALKING\_UPSTAIRS, 
+*WALKING\_DOWNSTAIRS, 
+*SITTING, 
+*STANDING, 
+*LAYING
 
 
 ##Structure of the data
 
+ the data is structured so that:
+ the files subject\_train.txt, Y\_train.txt and,\_train.txt build a bloc containing only train data,
+and the files subject\_test.txt, Y\_test.txt and X\_test.txt build another bloc containing only test data. Both blocs
+ use the  features.txt file to name their columns. the tidy data set is composed of the two blocs merged using rbind.
+ 
 
 
 
-
-
-
-
-
-
-
+ocs
 ##transformations
 
 Following transformations were done to the data.
@@ -77,6 +76,9 @@ Creates a second, independent tidy data set with the average of each variable fo
 
 
 ## Variable description
+
+Here is the full list of variables.
+
  activiy_name                                  
  Subjects                                      
  Time.Body.Accelerometer.mean.Z                
@@ -148,14 +150,16 @@ Creates a second, independent tidy data set with the average of each variable fo
 
 
 
+ a summary of the variables
 
-
- activiy_name  
+ activiy_name
+ 6 activities()
  Length:180 
  Class :character 
  Mode  :character
-        
+  
  Subjects   
+ 30 Subjects(1:30)
  Min.   : 1.0  
  1st Qu.: 8.0  
  Median :15.5  
