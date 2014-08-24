@@ -98,7 +98,7 @@
 #########################                        ###############################
 ################################################################################
 
-#Processing the activitieslabes
+#Processing the activities labels
   ## read the file with  descriptive activies (don't allow factors column in the data frame)
     activities<-read.table("E:/data/UCI HAR Dataset/activity_labels.txt", header=F,
                     stringsAsFactors=FALSE)
@@ -135,7 +135,6 @@
 # change double entry
     names(tidyDf) <- gsub("BodyBody", "Body", names(tidyDf))
  
-(tidyDf)  
 
    
 
