@@ -38,22 +38,8 @@ trainData and testData were merged to one,complete, data frame(mergedData) using
 
  Name the columns of the mergedData with the aid of the features.txt file and extract  mean and standard deviation measurements using the grep() function. Create a data frame(filterDf) with the extracted data  using a loop then name the columns of the new data frame.
  
- to get descriptive activities 
-
-
+ to get descriptive activities  use the merge() function to merge the data in activity_labels.txt to the data in the filterDf 
+ use the gsb() function to change the column names  data definitly tidy.
  
-column wise stack y_xxxx.txt, x_xxxx.txt and subject_xxx.txt using cbind for both training and test dataset ( xxxx = test / train). This gives consolidated data for both training and test dataset.
-row wise stack test and training data using rbind. This gives complete dataset.
-Extract out mean and standard deviation features ( with mean() and std() ).
-merge data in activity_labels.txt to the previously created dataset go get descriptive activities
-Do a group-wise average of the features by activity by subject using ddply.
-Complete details of transformations along with the code is given in run_analysis.R
-
-Variable description
-
-Columns were named to as descriptive as possible. In general, the variable names denoting the features follow the following convention and as an example AverageTimeBodyAccelerationJerk.Mean.X expands to :
-
-Summary	Domain	Signal Types	Sensor	velocity type	Statistics	Axis
-Average	Time/Frequency	Body/Gravity	Acceleration/Gyroscopic	Jerk / Magnitude	Mean/Standard Deviation	X/Y/Z
-Average	Time	Body	Acceleration	Jerk	Mean	X
-There is the complete list of all the variables. Measurements are normalized by dividing them by their range, they are all between -1 and 1 and do not have units ( units got cancelled by dividing)
+ Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+ 
