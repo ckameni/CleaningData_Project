@@ -1,3 +1,133 @@
+---
+#Coursera: Getting and Cleaning Data  
+
+---
+##Description of the data
+
+#Features
+
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
+
+These signals were used to estimate variables of the feature vector for each pattern: '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+
+##Subjects
+
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING\_UPSTAIRS,WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+
+The subjects are numbered from 1 to 30
+
+
+##Activities
+
+Each of the subject were measured for the following six activities: WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+
+##Structure of the data
+
+
+
+
+
+
+
+
+
+
+
+##transformations
+
+Following transformations were done to the data.
+
+The files X\_train.txt, Y\_train.txt and subject\_train.txt were merge to one data set(trainData) containing all the three training data. The files X\_test.txt, Y\_test.txt and the subject\_test.txt were merge to one data set( testData) containing all the three test data. trainData and testData were merged to one,complete, data frame(mergedData) using rbind.
+
+Name the columns of the mergedData with the aid of the features.txt file and extract mean and standard deviation measurements using the grep() function. Create a data frame(filterDf) with the extracted data using a loop then name the columns of the new data frame.
+
+to get descriptive activities use the merge() function to merge the data in activity_labels.txt to the data in the filterDf use the gsb() function to change the column names data definitly tidy.
+
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+
+## Variable description
+ activiy_name                                  
+ Subjects                                      
+ Time.Body.Accelerometer.mean.Z                
+ Time.Body.Accelerometer.std.X                 
+ Time.Body.Accelerometer.std.Y                 
+ Time.Body.Accelerometer.std.Z                 
+ Time.Body.Accelerometer.mad.X                 
+ Time.Body.Accelerometer.mad.Y                 
+ Time.Gravity.Accelerometer.mean.Z             
+ Time.Gravity.Accelerometer.std.X              
+ Time.Gravity.Accelerometer.std.Y              
+ Time.Gravity.Accelerometer.std.Z              
+ Time.Gravity.Accelerometer.mad.X              
+ Time.Gravity.Accelerometer.mad.Y              
+ Time.Body.Accelerometer.Jerk.mean.Z           
+ Time.Body.Accelerometer.Jerk.std.X            
+ Time.Body.Accelerometer.Jerk.std.Y            
+ Time.Body.Accelerometer.Jerk.std.Z            
+ Time.Body.Accelerometer.Jerk.mad.X            
+ Time.Body.Accelerometer.Jerk.mad.Y            
+ Time.Body.Gyroscope.mean.Z                    
+ Time.Body.Gyroscope.std.X                     
+ Time.Body.Gyroscope.std.Y                     
+ Time.Body.Gyroscope.std.Z                     
+ Time.Body.Gyroscope.mad.X                     
+ Time.Body.Gyroscope.mad.Y                     
+ Time.Body.Gyroscope.Jerk.mean.Z               
+ Time.Body.Gyroscope.Jerk.std.X                
+ Time.Body.Gyroscope.Jerk.std.Y                
+ Time.Body.Gyroscope.Jerk.std.Z                
+ Time.Body.Gyroscope.Jerk.mad.X                
+ Time.Body.Gyroscope.Jerk.mad.Y                
+ Time.Body.Accelerometer.Magnitude.mad         
+ Time.Body.Accelerometer.Magnitude.max         
+ Time.Gravity.Accelerometer.Magnitude.mad      
+ Time.Gravity.Accelerometer.Magnitude.max      
+ Time.Body.Accelerometer.JerkMagnitude.mad     
+ Time.Body.Accelerometer.JerkMagnitude.max     
+ Time.Body.Gyroscope.Magnitude.mad             
+ Time.Body.Gyroscope.Magnitude.max             
+ Time.Body.Gyroscope.JerkMagnitude.mad         
+ Time.Body.Gyroscope.JerkMagnitude.max         
+ Frequence.Body.Accelerometer.mean.Z           
+ Frequence.Body.Accelerometer.std.X            
+ Frequence.Body.Accelerometer.std.Y            
+ Frequence.Body.Accelerometer.std.Z            
+ Frequence.Body.Accelerometer.mad.X            
+ Frequence.Body.Accelerometer.mad.Y            
+ Frequence.Body.Accelerometer.Jerk.mean.Z      
+ Frequence.Body.Accelerometer.Jerk.std.X       
+ Frequence.Body.Accelerometer.Jerk.std.Y       
+ Frequence.Body.Accelerometer.Jerk.std.Z       
+ Frequence.Body.Accelerometer.Jerk.mad.X       
+ Frequence.Body.Accelerometer.Jerk.mad.Y       
+ Frequence.Body.Gyroscope.mean.Z               
+ Frequence.Body.Gyroscope.std.X                
+ Frequence.Body.Gyroscope.std.Y                
+ Frequence.Body.Gyroscope.std.Z                
+ Frequence.Body.Gyroscope.mad.X                
+ Frequence.Body.Gyroscope.mad.Y                
+ Frequence.Body.Accelerometer.Magnitude.mad    
+ Frequence.Body.Accelerometer.Magnitude.max    
+ Frequence.Body.Accelerometer.JerkMagnitude.mad
+ Frequence.Body.Accelerometer.JerkMagnitude.max
+ Frequence.Body.Gyroscope.Magnitude.mad        
+ Frequence.Body.Gyroscope.Magnitude.max        
+ Frequence.Body.Gyroscope.JerkMagnitude.mad    
+ Frequence.Body.Gyroscope.JerkMagnitude.max   
+
+
+
+
 
  activiy_name  
  Length:180 
