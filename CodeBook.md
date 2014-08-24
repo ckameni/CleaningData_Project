@@ -14,12 +14,12 @@ The subjects are numbered from 1 to 30
 ##Activities
 
 Each of the subject were measured for the following six activities: 
-**WALKING, 
-**WALKING\_UPSTAIRS, 
-**WALKING\_DOWNSTAIRS, 
-**SITTING, 
-**STANDING, 
-**LAYING
+* WALKING, 
+* WALKING\_UPSTAIRS, 
+* WALKING\_DOWNSTAIRS, 
+* SITTING, 
+* STANDING, 
+* LAYING
 
 
 #Features
