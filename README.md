@@ -14,6 +14,7 @@ These signals were used to estimate variables of the feature vector for each pat
 
 ###Subjects
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS,WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+
 The subjects are numbered from 1 to 30
 
 ###Activities
@@ -31,6 +32,8 @@ Each of the subject were measured for the following six activities:
 ##transformations
 Following transformations were done to the data.
 
+ The files X\_train.txt, Y\_train.txt and subject\_train.txt were merge to one using cbind to one data set containing all the three training data. TheX\_test.txt,Y\_test.txt and the subject_test.txt
+ 
 column wise stack y_xxxx.txt, x_xxxx.txt and subject_xxx.txt using cbind for both training and test dataset ( xxxx = test / train). This gives consolidated data for both training and test dataset.
 row wise stack test and training data using rbind. This gives complete dataset.
 Extract out mean and standard deviation features ( with mean() and std() ).
