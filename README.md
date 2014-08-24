@@ -96,6 +96,8 @@ Each of the subject were measured for the following six activities:
 [66] "Frequence.Body.Gyroscope.Magnitude.max"        
 [67] "Frequence.Body.Gyroscope.JerkMagnitude.mad"    
 [68] "Frequence.Body.Gyroscope.JerkMagnitude.max
+
+
 ##transformations
 Following transformations were done to the data.
 
