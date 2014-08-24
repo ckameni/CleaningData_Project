@@ -91,7 +91,9 @@ Each of the subject were measured for the following six activities:
   [61] "Frequence.Body.Accelerometer.Magnitude.mad"    
   [62] "Frequence.Body.Accelerometer.Magnitude.max"    
   [63] "Frequence.Body.Accelerometer.JerkMagnitude.mad"
+  
   [64] "Frequence.Body.Accelerometer.JerkMagnitude.max"
+  
   [65] "Frequence.Body.Gyroscope.Magnitude.mad"        
   [66] "Frequence.Body.Gyroscope.Magnitude.max"        
   [67] "Frequence.Body.Gyroscope.JerkMagnitude.mad"    
